@@ -129,13 +129,16 @@ e2e/              # testes Playwright
 
 ## Uso de Inteligência Artificial
 
-O projeto foi desenvolvido com apoio do **Claude Code** (assistente de programação da Anthropic), usado para:
-- propor a arquitetura de pastas, a estrutura dos contextos e o hook `useFetch`;
-- escrever as primeiras versões dos schemas Zod a partir das respostas reais da DummyJSON;
-- sugerir cenários de teste de borda (sessão expirada, 401, JSON corrompido no `localStorage`, busca + categoria combinadas) e montar os testes Vitest/Playwright;
-- configurar os workflows do GitHub Actions e o fallback `404.html`.
+Usei o **Claude Code** (assistente de programação da Anthropic) ao longo de todo o projeto, e não só em partes pontuais. A partir do enunciado e das minhas instruções, ele gerou a maior parte do código e da configuração:
+- a arquitetura de pastas, os contextos de autenticação e carrinho e o hook `useFetch`;
+- os componentes, as páginas e os formulários com Mantine;
+- os schemas Zod, escritos a partir das respostas reais da DummyJSON;
+- os testes Vitest/RTL e Playwright, incluindo os cenários de borda (sessão expirada, resposta 401, JSON corrompido no `localStorage`, busca combinada com categoria);
+- os workflows do GitHub Actions, o fallback `404.html` do GitHub Pages e a publicação do repositório, com a proteção da branch `main`.
 
-Todo o código foi revisado, executado e testado localmente antes de entrar no repositório. Algumas decisões que vieram da revisão:
+Meu papel foi escolher o tema, definir o que cada tela deveria fazer, rodar a aplicação e os testes e conferir o resultado contra os 10 requisitos do enunciado. Nada entrou no repositório sem passar no lint, no `tsc` e nos testes automatizados.
+
+Alguns problemas só apareceram ao executar a aplicação e os testes, e mudaram a implementação:
 - A DummyJSON devolve o mesmo `id` para todo produto criado; o painel gera um id local único para não duplicar chaves.
 - A busca textual da API não aceita filtro de categoria junto; nesse caso o serviço busca a categoria inteira e filtra/pagina no cliente.
 - O logout era interrompido pelo `ProtectedRoute`, que redirecionava para `/login`; o teste E2E pegou o problema, resolvido colocando o logout na mesma transição da navegação.
