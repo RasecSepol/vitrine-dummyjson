@@ -1,10 +1,10 @@
 # Vitrine DummyJSON
 
-🔗 **Aplicação no ar:** https://SEU-USUARIO.github.io/vitrine-dummyjson/
-📦 **Repositório:** https://github.com/SEU-USUARIO/vitrine-dummyjson
+🔗 **Aplicação no ar:** https://rasecsepol.github.io/vitrine-dummyjson/
+📦 **Repositório:** https://github.com/RasecSepol/vitrine-dummyjson
 
-[![CI](https://github.com/SEU-USUARIO/vitrine-dummyjson/actions/workflows/ci.yml/badge.svg)](https://github.com/SEU-USUARIO/vitrine-dummyjson/actions/workflows/ci.yml)
-[![Deploy](https://github.com/SEU-USUARIO/vitrine-dummyjson/actions/workflows/deploy.yml/badge.svg)](https://github.com/SEU-USUARIO/vitrine-dummyjson/actions/workflows/deploy.yml)
+[![CI](https://github.com/RasecSepol/vitrine-dummyjson/actions/workflows/ci.yml/badge.svg)](https://github.com/RasecSepol/vitrine-dummyjson/actions/workflows/ci.yml)
+[![Deploy](https://github.com/RasecSepol/vitrine-dummyjson/actions/workflows/deploy.yml/badge.svg)](https://github.com/RasecSepol/vitrine-dummyjson/actions/workflows/deploy.yml)
 
 Aplicação web em **React + TypeScript** que consome a API pública [DummyJSON](https://dummyjson.com).
 
